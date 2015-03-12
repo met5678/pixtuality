@@ -1,0 +1,8 @@
+<template name="globalLayout">
+	Test
+	{{#famousContext id="mainCtx"}}
+		{{#RenderController target="content"}}
+			{{>yield}}
+		{{/RenderController}}
+	{{/famousContext}}
+</template>

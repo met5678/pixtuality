@@ -1,0 +1,7 @@
+<template name="menuExistingRooms">
+	{{#FlexScrollView layout="ListLayout" direction="Y" layoutOptions='{"itemSize":"50"}'}}
+		{{#famousEach rooms}}
+			{{>Surface template="menuRoom" size="[undefined,true]"}}
+		{{/famousEach}}
+	{{/FlexScrollView}}
+</template>
