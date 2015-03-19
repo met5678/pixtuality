@@ -2,11 +2,21 @@ Router.configure({
 	layoutTemplate: 'globalLayout'
 });
 
-Router.route('/', function() {
-	this.render('menuMain');
+Router.route('/', {
+	name: 'menu',
+	template: 'menuMain',
+	waitOn: function() {
+		return Meteor.subscribe('rooms');
+	}
 });
 
-Router.route('/room/:_id', function() {
-	var item = Rooms.findOne(this.params._id);
-	this.render('roomMain', {data: room});
+Router.route('/room/:_id',{
+	name: 'room',
+	template: 'roomMain',
+	waitOn: function() {
+		return Meteor.subscribe('roomDetail',this.params._id);
+	},
+	data: function() {
+		return Rooms.findOne(this.params._id);
+	}
 });
