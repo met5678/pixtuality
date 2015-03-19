@@ -1,0 +1,19 @@
+<template name="lobbyParticipantsGrid">
+    <div class="Grid Grid--col">
+      {{#each participants}}
+        {{> lobbyParticipant}}
+      {{/each}}
+    </div>
+</template>
+
+
+<template name="lobbyParticipant">
+  {{#Animate}}
+  <div class="Grid-item animate">
+    <div class="User">
+      <div class="User-avatar" style="background-image:url({{avatar}});"></div>
+      <div class="User-username">{{alias}}</div>
+    </div>
+  </div>
+  {{/Animate}}
+</template>
