@@ -1,17 +1,12 @@
-.Lobby {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  display: flex;
-  flex-direction: column;
+@mixin outline {
+  // outline: 1px solid green;
 }
 
+$themeColor: #fff;
 
-.Lobby-backgroundGif {
-  z-index: 1;
+
+.BackgroundGif {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -19,26 +14,108 @@
   bottom: 0;
   background-size: cover;
   background-position: center;
-  opacity: .5;
+  opacity: .25;
   // transition: all 2s ease-in;
 }
 
-.Lobby-count {
-  position: relative;
+.Lobby {
   z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
+  flex-direction: column;
+}
+
+.Lobby-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 50px 100px;
+
+}
+
+.Lobby-footer {
+  margin: 50px 100px;
+}
+
+.Lobby-instructions {
+  font-size: 48px;
+  margin-bottom: 24px;
+
+  small {
+    display: inline-block;
+    line-height: 1;
+    font-size: 24px;
+  }
+}
+
+.Lobby-code {
+  background: #fff;
+  color: #000;
+  padding-left: .1em;
+  padding-right: .1em;
+}
+
+// .Lobby-phoneNumber {
+//   background: #fff;
+//   color: #000;
+//   padding-left: .1em;
+//   padding-right: .1em;
+// }
+
+.Lobby-count {
   font-weight: 100;
-  font-size: 64px;
+  font-size: 32px;
   line-height: 1;
   text-align: right;
 }
 
-.Lobby-participantsGrid {
+.Lobby-players {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // justify-content: center;
+  align-content: flex-start;
+  // align-items: center;
   flex: 1;
-  position: relative;
-  z-index: 2;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+
+
+  @include outline;
+}
+
+.Lobby-player {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  margin: 20px;
+  @include outline;
+}
+
+.Player-avatar {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid $themeColor;
+  background-color: #000;
+  background-size: cover;
+  background-image: url(http://lorempixel.com/200/200/people/);
+  box-shadow: 0 1px 2px #000;
+}
+
+.Player-name {
+  font-size: 32px;
+  font-weight: 100;
+  text-shadow: 0 1px 2px #000;
 }

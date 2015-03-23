@@ -1,7 +1,28 @@
 <template name="lobby">
-  <div class="Lobby cover">
-    {{> lobbyBackgroundGif}}
-    {{> lobbyParticipantsCount}}
-    {{> lobbyParticipantsGrid}}
+  {{> lobbyBackgroundGif}}
+  <div class="Lobby">
+
+    <header class="Lobby-header">
+
+      <div class="Lobby-instructions">
+        Text <span class="Lobby-code">ABC</span> to <span class="Lobby-phoneNumber">555-555-5555</span> to join
+        <br>
+        <small>Send a picture to customize your avatar. Text #name XYZ to change your name</small>
+        <br>
+        <small></small>
+      </div>
+
+      <div class="Lobby-count">
+        <strong>{{ curPlayers }}</strong>&nbsp;/&nbsp;{{ maxPlayers}}
+      </div>
+
+    </header>
+
+    {{> lobbyPlayers}}
+
+    <footer class="Lobby-footer">
+
+    </footer>
+
   </div>
 </template>

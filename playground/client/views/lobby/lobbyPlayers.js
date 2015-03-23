@@ -1,4 +1,4 @@
-Template.lobbyParticipantsGrid.helpers({
+Template.lobbyPlayers.helpers({
   'participants': function() {
     return Participants.find();
   }
