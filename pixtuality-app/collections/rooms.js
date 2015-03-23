@@ -4,13 +4,13 @@ Meteor.methods({
 	'room_create': function() {
 		var room = {
 			mode: 'lobby',
-			participants: [],
-			maxParticipants: 32,
-			phoneNumber:'571-989-4785'
-		};
-		console.log('Create room');
+			players: [],
+			maxPlayers: 32,
+			phoneNumber:'571-989-4785',
 
-		Rooms.insert(room);
+		};
+
+		return Rooms.insert(room);
 	}
 });
 

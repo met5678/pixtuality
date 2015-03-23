@@ -1,8 +1,7 @@
 <template name="globalLayout">
-	Test
 	{{#famousContext id="mainCtx"}}
-		{{#RenderController target="content"}}
+		{{! #RenderController id="rootRC" transition=getTransition}}
 			{{>yield}}
-		{{/RenderController}}
+		{{! /RenderController}}
 	{{/famousContext}}
 </template>

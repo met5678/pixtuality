@@ -1,2 +1,9 @@
 <template name="lobbyMain">
+	{{#HeaderFooterLayout headerSize="100" footerSize="100" size="[undefined,undefined]"}}
+		{{>View target="header" template="lobbyHeader" size="[undefined,undefined]" id="lobbyHeader"}}
+
+		{{>lobbyPlayers}}
+
+		{{>Surface target="footer" template="lobbyFooter"}}
+	{{/HeaderFooterLayout}}
 </template>
