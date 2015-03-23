@@ -1,0 +1,13 @@
+<template name="lobbyHeader">
+	{{#Surface align="[0,0.5]" origin="[0,0.5]" size="[true,true]"}}
+		<h1>Room Code: {{roomCode}}</h1>
+	{{/Surface}}
+
+	{{#Surface align="[0.5,0.5]" origin="[0.5,0.5]" size="[true,true]"}}
+		<h1>{{numPlayers}} / {{maxPlayers}}</h1>
+	{{/Surface}}
+
+	{{#Surface align="[1,0.5]" origin="[1,0.5]" size="[300,true]"}}
+		<h1>Phone #: {{phoneNumber}}</h1>
+	{{/Surface}}
+</template>

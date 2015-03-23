@@ -1,0 +1,7 @@
+<template name="lobbyPlayers">
+	{{#FlexLayoutController target="content" layout="GridLayout" }}
+		{{#famousEach players}}
+			{{>Surface template="lobbyPlayer"}}
+		{{/famousEach}}
+	{{/FlexLayoutController}}
+</template>

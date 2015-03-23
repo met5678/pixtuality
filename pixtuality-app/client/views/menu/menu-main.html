@@ -1,6 +1,6 @@
 <template name="menuMain">
-	{{#HeaderFooterLayout headerSize="62" layoutOptions='{"margins":"[20,20,20,20]"}'}}}
+	{{#HeaderFooterLayout headerSize="76" align="[0.5,0.5]" origin="[0.5,0.5]" proportions="[0.9,0.9]"}}
 		{{>Surface target="header" template="menuCreateRoom"}}
-		{{>ContainerSurface target="content" template="menuExistingRooms"}}
+		{{>menuExistingRooms}}
 	{{/HeaderFooterLayout}}
 </template>

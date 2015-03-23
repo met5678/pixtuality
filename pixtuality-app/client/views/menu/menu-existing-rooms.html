@@ -1,7 +1,11 @@
 <template name="menuExistingRooms">
-	{{#FlexScrollView layout="ListLayout" direction="Y" layoutOptions='{"itemSize":"50"}'}}
-		{{#famousEach rooms}}
-			{{>Surface template="menuRoom" size="[undefined,true]"}}
-		{{/famousEach}}
-	{{/FlexScrollView}}
+	{{#ContainerSurface perspective=500 overflow="hidden" target="content" size="[undefined,undefined]"}}
+		{{! #FlexScrollView layout="ListLayout" direction="Y" layoutOptions='{"itemSize":"50","margins":"[10,10,10,10]","spacing":2}' size="[undefined,undefined]"}}
+		{{#Scrollview size="[undefined,true]"}}
+			{{#famousEach rooms}}
+				{{>Surface template="menuRoom" size="[undefined,50]" class="room-surface"}}
+			{{/famousEach}}
+		{{/Scrollview}}
+		{{! /FlexScrollView}}
+	{{/ContainerSurface}}
 </template>
