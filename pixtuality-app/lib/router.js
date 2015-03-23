@@ -12,7 +12,7 @@ Router.route('/', {
 
 Router.route('/room/:_id',{
 	name: 'room',
-	template: 'roomMain',
+	template: 'lobbyMain',
 	waitOn: function() {
 		return Meteor.subscribe('roomDetail',this.params._id);
 	},
